@@ -11,7 +11,7 @@ setup(
     author_email = "oa.it-infrastructure@austin.utexas.edu",
     description = ("Subclass of HTTPSConnection that allows specifying "
                    "the protocol suite for Python 2.6/2.7."),
-    url = "https://github.com/ut-adamc/https_shim",
+    url = "https://github.com/UT-Austin-FIS/https_shim",
     packages = find_packages(),
     install_requires = [],
     extras_require = {

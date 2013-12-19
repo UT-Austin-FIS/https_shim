@@ -6,7 +6,7 @@ def read(fname):
 
 setup(
     name = "https_shim",
-    version = "0.0.1",
+    version = "0.1.0",
     author = "FIS Infrastructure Team",
     author_email = "oa.it-infrastructure@austin.utexas.edu",
     description = ("Subclass of HTTPSConnection that allows specifying "

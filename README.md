@@ -28,6 +28,8 @@ See the tests if you want a few examples.
 
 Testing
 =======
+*Note* that this has only really been tested in Python 2.6 so far.
+
 You can run the tests with 
 
     nosetests https_shim

@@ -44,8 +44,12 @@ class HTTPSConnection(httplib.HTTPSConnection):
             vers = self.ssl_version
         else:
             vers = ssl_version
+            
+        return self._connect_with_ssl_version(vers)
 
-        if vers is None:
+    def _connect_with_ssl_version(self, ssl_version):
+
+        if ssl_version is None:
             return httplib.HTTPSConnection.connect(self)
 
         # No source_address before Python 2.7
@@ -62,4 +66,4 @@ class HTTPSConnection(httplib.HTTPSConnection):
             self.sock = sock
             self._tunnel()
         self.sock = ssl.wrap_socket(sock, self.key_file, self.cert_file,
-                                    ssl_version=vers)
+                                    ssl_version=ssl_version)

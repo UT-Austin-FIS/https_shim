@@ -15,7 +15,16 @@ import ssl
 conn = https_shim.HTTPSConnection('httpbin.org', '443', ssl_version=ssl.PROTOCOL_SSLv3)
 conn.request('GET', '/get?foo=bar')
 ...
-````
+
+or
+
+conn.https_shim.HTTPSConnection('httpbin.org', '443')
+conn.connect(ssl_version=ssl.PROTOCOL_SSLv3)
+...
+
+```
+
+See the tests if you want a few examples.
 
 Testing
 =======
@@ -27,4 +36,5 @@ If you pip install with the extra "test_support", the packages needed for runnin
 alsoo be installed (in particular, nose), e.g.,
 
     pip install -e <path-to-https-shim>[test_support]
+
 

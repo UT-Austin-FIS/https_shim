@@ -15,7 +15,7 @@ setup(
     packages = find_packages(),
     install_requires = [],
     extras_require = {
-        'test_support': ["nose>=1.3.0"],
+        'test_support': ["mock>=1.0.1", "nose>=1.3.0"],
     },
     long_description = read("README.md"),
     classifiers=["Development Status :: 4 - Beta"],

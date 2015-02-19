@@ -57,7 +57,7 @@ class HTTPSConnection(httplib.HTTPSConnection):
             sock = socket.create_connection(
                         (self.host, self.port),
                         self.timeout,
-                        setattr(self, 'source_address')
+                        getattr(self, 'source_address')
             )
         else:
             sock = socket.create_connection((self.host, self.port),

@@ -19,7 +19,7 @@ class HTTPSConnection(httplib.HTTPSConnection):
         The same parameters as in httplib.HTTPSConnection, with the addition
         of ssl_version: One of the SSL PROTOCOL versions defined in the
         ssl module (PROTOCOL_SSLV2, PROTOCOL_SSLv23, etc. Note the
-        security warnings: SSL version 2 is insecure!
+        security warnings: SSL versions 2 and 3 are insecure!
         """
         if len(args) > 4:
             self.ssl_version = args[4]

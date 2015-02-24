@@ -7,7 +7,6 @@ import urlparse
 from https_shim import HTTPSConnection
 from mock import Mock, patch
 
-HOSTNAME = "entdir.utexas.edu"
 
 class ConnectionError(RuntimeError):
     pass
@@ -187,6 +186,7 @@ class LookupTests(unittest.TestCase):
                                   ssl_version=ssl.PROTOCOL_SSLv23)
         self.assertEqual(0, len(errors))
 
+    @unittest.skip('httpbin.org turned off SSLv3 support')
     def test_can_get_using_SSLv3_connect_request(self):
         errors = self._connect_with_request(path='/get', method='GET',
                                   ssl_version=ssl.PROTOCOL_SSLv3)
@@ -205,6 +205,7 @@ class LookupTests(unittest.TestCase):
         errors = self._connect_with_request(ssl_version=ssl.PROTOCOL_SSLv23)
         self.assertEqual(0, len(errors))
 
+    @unittest.skip('httpbin.org turned off SSLv3 support')
     def test_can_post_using_SSLv3_connect_request(self):
         errors = self._connect_with_request(ssl_version=ssl.PROTOCOL_SSLv3)
         self.assertEqual(0, len(errors))
@@ -222,6 +223,7 @@ class LookupTests(unittest.TestCase):
                                   ssl_version=ssl.PROTOCOL_SSLv23)
         self.assertEqual(0, len(errors))
 
+    @unittest.skip('httpbin.org turned off SSLv3 support')
     def test_can_get_using_SSLv3_connect_full(self):
         errors = self._connect_full(path='/get', method='GET',
                                   ssl_version=ssl.PROTOCOL_SSLv3)
@@ -240,6 +242,7 @@ class LookupTests(unittest.TestCase):
         errors = self._connect_full(ssl_version=ssl.PROTOCOL_SSLv23)
         self.assertEqual(0, len(errors))
 
+    @unittest.skip('httpbin.org turned off SSLv3 support')
     def test_can_post_using_SSLv3_connect_full(self):
         errors = self._connect_full(ssl_version=ssl.PROTOCOL_SSLv3)
         self.assertEqual(0, len(errors))

@@ -40,3 +40,12 @@ alsoo be installed (in particular, nose), e.g.,
     pip install -e <path-to-https-shim>[test_support]
 
 
+Releases
+========
+
+* 0.10.1 (in progress)
+  * adding support for Python 2.7
+    * this library may not be necessary as of Python 2.7.9
+    * tests require Python >= 2.7
+* 0.10.0 (2013/12/19)
+  * initial release with support for Python <= 2.6

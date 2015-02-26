@@ -43,7 +43,7 @@ alsoo be installed (in particular, nose), e.g.,
 Releases
 ========
 
-* 0.10.1 (in progress)
+* 0.10.1 (2015/02/26)
   * adding support for Python 2.7
     * this library may not be necessary as of Python 2.7.9
     * tests require Python >= 2.7
